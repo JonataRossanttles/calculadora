@@ -1,0 +1,181 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200&family=League+Spartan:wght@700&display=swap');
+:root{
+    --font-principal: 'League Spartan', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-principal);
+    font-weight:700;
+   
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 0%, 93%);
+   
+}
+#container-geral{
+    width: 450px;
+    height: 600px;
+    
+    margin: auto;
+    margin-top: 10vh;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+#visor-calculos{
+    background-color:  hsl(0, 0%, 97%);
+    height: 100px; 
+    margin: 20px 0px 20px 0px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+}
+
+#visor-calculos> input {
+    color: hsl(60, 10%, 19%);
+    font-size: 32px;
+    padding: 10px;
+    border-style: none;
+    text-align: end;
+}
+#container-btn{
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(5, 60px);
+    grid-template-columns: repeat(4, 80px);
+    gap: 18px;
+    
+    justify-content: center;
+    background-color: hsl(0, 5%, 81%);
+    border-radius: 10px;
+    padding: 20px;
+}
+.btn{
+    color: hsl(221, 14%, 31%);
+    font-family: var(--font-principal);
+    width: 80px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 25px;
+    border-style: none;
+      box-shadow: 0px 3px 1px hsl(28, 16%, 65%);  
+}
+.btn:hover{
+background-color: white;
+}
+#del{
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    box-shadow: 0px 3px 1px hsl(185, 58%, 25%); 
+}
+#del:hover, #reset:hover{
+   opacity: 0.8;
+}
+
+#reset{
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(0, 0%, 100%);
+    width: 172px;
+    font-size: 20px;
+    box-shadow: 0px 3px 1px hsl(185, 58%, 25%); 
+}
+#igual{
+    position: absolute;
+    background-color: hsl(25, 98%, 40%);
+    color: hsl(0, 0%, 100%);
+    width: 172px;
+    right: 24px;
+    bottom: 30px;
+    box-shadow: 0px 3px 1px hsl(25, 99%, 27%); 
+}
+#igual:hover{
+    
+  opacity: 0.8;
+   
+}
+#input-theme{
+    -webkit-appearance:none;
+    background-color: hsl(0, 5%, 81%);
+    width: 60px;
+    border-radius: 20px;
+    padding:3px;
+    color: aqua;
+}
+
+#text-calc{
+    font-size: 32px;
+    color: hsl(60, 10%, 19%);
+}
+#text-theme{
+    font-size: 13px;
+    color: hsl(60, 10%, 19%);
+    align-self: end;
+    margin: 0px 15px 5px 0px;
+    
+}
+#container-text-header{
+    display: flex;
+    justify-content: space-between;
+}
+#div-input{
+    display: flex;
+    flex-direction: column;
+}
+#container-tema{
+    display: flex;
+}
+#ids{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4px;
+}
+.id{
+    color: hsl(60, 10%, 19%);
+    font-size: 12px;
+}
+@media screen and (max-width:475px){
+    #container-geral{
+        width: 300px;
+        height: 600px;
+        
+        margin: auto;
+        margin-top: 10vh;
+        padding: 10px;
+        border-radius: 10px;
+    
+    }
+    #container-btn{
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(5, 40px);
+        grid-template-columns: repeat(4, 45px);
+        gap: 15px;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .btn{
+        
+        width: 50px;
+        height: 30px;
+        border-radius: 8px;
+        font-size: 20px;
+        
+    }
+    #igual, #reset{
+        width: 110px;
+        
+    }
+    #del,#reset{
+        font-size: 14px;
+    }
+}

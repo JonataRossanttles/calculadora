@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link id = "theme" rel="stylesheet" href="theme1.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+
+</head>
+<body>
+
+<main id="container-geral">
+  <div id="container-text-header"> 
+    <span id="text-calc">calc</span>
+    
+    <div id="container-tema">
+      <span id="text-theme">THEME</span>
+      <div id="div-input">
+        <div id="ids">
+          <span class="id">1</span>
+          <span class="id">2</span>
+          <span class="id">3</span>
+        </div>
+        <input type="range" min="1" max="3" id="input-theme" value="1" oninput="mudar_tema()">
+      </div>
+     
+    </div>
+  
+  </div>
+  
+    <div id="visor-calculos">
+      <!-- <p ></p>   -->
+      <input type="text" id="p-visor" style="background-color: transparent;">
+    </div>
+      <div id="container-btn">
+        
+          <button class="btn" onclick="clickbutton('7')">7</button>
+          <button class="btn" onclick="clickbutton('8')">8</button>
+          <button class="btn" onclick="clickbutton('9')">9</button>
+          <button class="btn" id="del" onclick="clean()">DEL</button>
+          <button class="btn" onclick="clickbutton('4')">4</button>
+          <button class="btn" onclick="clickbutton('5')">5</button>
+          <button class="btn" onclick="clickbutton('6')">6</button>
+          <button class="btn" onclick="clickbutton('+')">+</button>
+          <button class="btn" onclick="clickbutton('1')" >1</button>
+          <button class="btn" onclick="clickbutton('2')">2</button>
+          <button class="btn" onclick="clickbutton('3')">3</button>
+          <button class="btn" onclick="clickbutton('-')">-</button>
+          <button class="btn" onclick="clickbutton('.')">.</button>
+          <button class="btn" onclick="clickbutton('0')">0</button>
+          <button class="btn" onclick="clickbutton('/')">/</button>
+          <button class="btn" onclick="clickbutton('*')">x</button>
+          <button class="btn" id="reset" onclick="reset()">RESET</button>
+          <button class="btn" id="igual" onclick="resultado()">=</button>
+      
+      </div>
+  </main>
+
+  <script>
+// Funções para calculo
+var paragrafo = document.querySelector("#p-visor")
+function clickbutton(num){
+var numero = paragrafo.value
+paragrafo.value = numero + num
+}
+
+function clean(){
+  var texto = paragrafo.value
+  var novotexto = paragrafo.value.substring(0, texto.length-1)
+  paragrafo.value = novotexto
+console.log(novotexto)
+}
+
+function reset(){
+  paragrafo.value = ('')
+}
+function resultado(){
+  var resultado =  paragrafo.value
+  
+  paragrafo.value = eval(resultado)
+}
+
+// Funções para mudança de tema
+var input_tema = document.querySelector("#input-theme")
+var linkcss =  document.querySelector("#theme")
+
+function mudar_tema(){
+
+  if(input_tema.value)
+// input_tema.value +=1 
+
+  if(input_tema.value==3){
+    linkcss.setAttribute ("href","theme3.css")
+
+console.log(input_tema.value)
+}else if(input_tema.value==2){
+  linkcss.setAttribute ("href","theme2.css")
+}else{
+  linkcss.setAttribute ("href","theme1.css")
+
+}
+}
+
+
+
+
+
+  </script>
+</body>
+
+
+
+</html>
