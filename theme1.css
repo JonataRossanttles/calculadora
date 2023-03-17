@@ -108,8 +108,28 @@ background-color: white;
     width: 60px;
     border-radius: 20px;
     padding:3px;
-    color: aqua;
+    cursor: pointer;
+    
 }
+#input-theme::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%; 
+    padding: 8px;
+    background: hsl(6, 63%, 50%);
+    
+}
+#input-theme::-moz-range-thumb  {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%; 
+    padding: 8px;
+    background: hsl(6, 63%, 50%);
+    
+}
+
 
 #text-calc{
     font-size: 32px;
@@ -119,7 +139,7 @@ background-color: white;
     font-size: 13px;
     color: hsl(0, 0%, 100%);
     align-self: end;
-    margin: 0px 15px 5px 0px;
+    margin: 0px 15px 3px 0px;
     
 }
 #container-text-header{
